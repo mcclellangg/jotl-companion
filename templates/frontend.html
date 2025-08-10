@@ -15,26 +15,75 @@
 </head>
 
 <body class="dark">
-    <form method="post">
+    <form id="characterForm" method="post">
         <fieldset>
-            <legend>Add Quote</legend>
+            <legend>Character Sheet</legend>
             <p>
-                <label>Quote</label>
-                <input type="quote" name="quote" required>
+                <label>Items</label>
+                <input type="text" name="items" required>
             </p>
             <p>
-                <label>Author</label>
-                <input type="author" name="author" required>
+                <label>Gold</label>
+                <input type="number" name="gold" required>
             </p>
             <p>
-                <label>Source</label>
-                <input type="source" name="source" required>
+                <label>Experience</label>
+                <input type="number" name="exp" required>
             </p>
             <p>
-                <button class="button" type="submit" value="Submit">Submit</button>
+                <button onclick="getFormData(event)" class="button" type="button">Download JSON</button>
             </p>
         </fieldset>
     </form>
 </body>
+<script>
+            function getFormData(event) {
+                    // Generated with Claude - https://claude.ai/public/artifacts/00cd9bfc-4e20-4bdd-ae5f-5546ae039796
+                    // Prevent form submission if called from submit button
+                    if (event) {
+                        event.preventDefault();
+                    }
+
+                    // Get form element
+                    const form = document.getElementById('characterForm');
+                    const formData = new FormData(form);
+
+                    // Convert FormData to regular object
+                    const data = {};
+                    for (let [key, value] of formData.entries()) {
+                        // Convert numeric fields to numbers
+                        if (key === 'gold' || key === 'exp') {
+                            data[key] = parseInt(value) || 0;
+                        } else {
+                            data[key] = value;
+                        }
+                    }
+
+                    // Add timestamp
+                    data.timestamp = new Date().toISOString();
+
+                    // Convert to JSON string
+                    const jsonString = JSON.stringify(data, null, 2);
+
+                    // Create blob and download link
+                    const blob = new Blob([jsonString], { type: 'application/json' });
+                    const url = URL.createObjectURL(blob);
+
+                    // Create temporary download link
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = url;
+                    downloadLink.download = `character_sheet_${new Date().toISOString().split('T')[0]}.json`;
+
+                    // Trigger download
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+
+                    // Clean up
+                    document.body.removeChild(downloadLink);
+                    URL.revokeObjectURL(url);
+
+                    console.log("Downloaded character sheet data:", data);
+                }
+</script>
 
 </html>
