@@ -12,5 +12,13 @@ def form():
     
     return render_template('frontend.html')
 
+@app.route("/scenario_log")
+def scenario_log():
+    return render_template("scenario_log.html")
+
+@app.route("/slv2")
+def slv2():
+    return render_template("slv2.html")
+
 if __name__ == '__main__':
     app.run()
