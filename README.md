@@ -4,6 +4,7 @@ Companion app for JOTL (Jaws of the Lion) meant to serve as a virtual representa
 ## Features
 - track gold, xp, items, perks added, player notes on a per encounter basis
 - automatically calculate totals and display them to player
+- Export/import table data in JSON format
 - mobile-friendly design
 
 ## Design notes
