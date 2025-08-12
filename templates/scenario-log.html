@@ -155,7 +155,7 @@
             <tbody id="tableBody">
                 <!-- Initial scenario -->
                 <tr class="scenario-group-1 first-row">
-                    <td><input type="text" class="encounter-name" value="Encounter_01"></td>
+                    <td><input type="text" class="encounter-name" value="E_01"></td>
                     <td class="number-cell"><input type="text" class="editable xp-input" value="0"></td>
                     <td class="number-cell"><input type="text" class="editable gold-input" value="0"></td>
                     <td class="notes-cell"><input type="text" class="editable" placeholder="Notes..."></td>
@@ -210,7 +210,7 @@
                 }
 
                 const nameCell = row.editable
-                    ? `<input type="text" class="encounter-name" value="Encounter_${encounterNumber}">`
+                    ? `<input type="text" class="encounter-name" value="E_${encounterNumber}">`
                     : `<span class="static-name">${row.type}_${encounterNumber}</span>`;
 
                 tr.innerHTML = `
@@ -333,7 +333,7 @@
                 const isEditable = rowType === 0; // Only encounter names are editable
 
                 const nameCell = isEditable
-                    ? `<input type="text" class="encounter-name" value="${item.encounterName || 'Encounter_' + String(scenarioNumber).padStart(2, '0')}">`
+                    ? `<input type="text" class="encounter-name" value="${item.encounterName || 'E_' + String(scenarioNumber).padStart(2, '0')}">`
                     : `<span class="static-name">${item.encounterName || 'Unknown'}</span>`;
 
                 tr.innerHTML = `
