@@ -319,48 +319,48 @@
             <div class="section-title">Perks</div>
             <div class="perk-item">
                 <input type="checkbox" id="perk1">
-                <label for="perk1">Remove four +0 cards</label>
+                <label for="perk1">Remove four -1 cards</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk2">
-                <label for="perk2">Remove two -1 cards</label>
+                <label for="perk2">Remove two +1 cards</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk3">
-                <label for="perk3">Remove one -2 card and one +1 card</label>
+                <label for="perk3">Remove one +2 card and one -1 card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk4">
                 <input type="checkbox" id="perk4b">
-                <label for="perk4">Replace one -1 card with one +1 card</label>
+                <label for="perk4">Replace one +1 card with one +1 card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk5">
                 <input type="checkbox" id="perk5b">
-                <label for="perk5">Replace one +1 card with one +2🔥 card</label>
+                <label for="perk5">Replace one +1 card with one +2⚡ card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk6">
                 <input type="checkbox" id="perk6b">
-                <label for="perk6">Replace one +1 card with one +2☀ card</label>
+                <label for="perk6">Replace one +1 card with one +2🔥 card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk7">
                 <input type="checkbox" id="perk7b">
-                <label for="perk7">Add one +1 🔥☀ card</label>
+                <label for="perk7">Add one +1 🎯⚡ card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk8">
                 <input type="checkbox" id="perk8b">
-                <label for="perk8">Add one +1 Shield 🛡1 card</label>
+                <label for="perk8">Add one +1 Shield 🛡+1 card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk9">
-                <label for="perk9">Replace one +0 card with one +1 IMMOBILIZE🥾 card</label>
+                <label for="perk9">Replace one -1 card with one +1 IMMOBILIZE⚡ card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk10">
-                <label for="perk10">Replace one +0 card with one +1 WOUND💥 card</label>
+                <label for="perk10">Replace one -1 card with one +1 WOUND♦ card</label>
             </div>
         </div>
 
@@ -432,11 +432,11 @@
             </div>
             <div class="item-row">
                 <div class="item-icon">👜</div>
-                <input type="text" class="item-input input" placeholder="Bag item">
+                <input type="text" class="item-input input" placeholder="Small item">
             </div>
             <div class="item-row">
                 <div class="item-icon">🎒</div>
-                <input type="text" class="item-input input" placeholder="Bag item">
+                <input type="text" class="item-input input" placeholder="Large item">
             </div>
         </div>
 
@@ -450,119 +450,40 @@
 
             <!-- Level Tracker -->
             <div class="level-tracker">
-                <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
-                    <tr>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">Lvl
-                        </td>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">1
-                        </td>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">2
-                        </td>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">3
-                        </td>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">4
-                        </td>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">5
-                        </td>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">6
-                        </td>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">7
-                        </td>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">8
-                        </td>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">9
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3"
-                            style="border: 1px solid #333; padding: 0.25rem; text-align: center; display: table-cell; vertical-align: middle;">
-                            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                                <div class="item-icon" style="width: 20px; height: 20px; font-size: 0.8rem;">🎒</div>
-                                <span>1</span>
-                            </div>
-                        </td>
-                        <td colspan="2" style="border: 1px solid #333; padding: 0.25rem; text-align: center;">2</td>
-                        <td colspan="2" style="border: 1px solid #333; padding: 0.25rem; text-align: center;">3</td>
-                        <td colspan="2" style="border: 1px solid #333; padding: 0.25rem; text-align: center;">4</td>
-                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center;">5</td>
-                    </tr>
-                </table>
+                <div><strong>Lvl</strong></div>
+                <div class="level-boxes">
+                    <div class="level-box">1</div>
+                    <div class="level-box">2</div>
+                    <div class="level-box">3</div>
+                    <div class="level-box">4</div>
+                    <div class="level-box">5</div>
+                    <div class="level-box">6</div>
+                    <div class="level-box">7</div>
+                    <div class="level-box">8</div>
+                    <div class="level-box">9</div>
+                </div>
+                <div
+                    style="margin-top: 0.5rem; display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+                    <div class="item-icon" style="width: 20px; height: 20px; font-size: 0.8rem;">🎒</div>
+                    <div style="display: flex; gap: 1rem; align-items: center; font-size: 0.9rem;">
+                        <span>1</span>
+                        <span>__</span>
+                        <span>2</span>
+                        <span>__</span>
+                        <span>3</span>
+                        <span>__</span>
+                        <span>4</span>
+                        <span>__</span>
+                        <span>5</span>
+                    </div>
+                </div>
+                <div style="margin-top: 0.25rem; font-size: 0.7rem; color: #666; text-align: center;">
+                    <div>Item bags per level:</div>
+                    <div>Lvl 1-2: 1 bag | Lvl 3-4: 2 bags | Lvl 5-6: 3 bags | Lvl 7-8: 4 bags | Lvl 9: 5 bags</div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- GPT SCRIPT -->
-    <!-- https://chatgpt.com/share/689b7e10-e404-8005-8610-fc989c4f244d -->
-    <!-- Add at the very end of <body>, just before </body> -->
-    <div class="is-center" style="margin-top: 2rem;">
-        <button id="exportBtn" class="button primary">Export JSON</button>
-        <button id="importBtn" class="button">Import JSON</button>
-        <input type="file" id="fileInput" accept=".json" style="display:none;">
-    </div>
-
-    <script>
-        function collectFormData() {
-            const data = {};
-
-            // Text inputs and textareas
-            document.querySelectorAll('input[type="text"], textarea').forEach(el => {
-                data[el.placeholder || el.previousElementSibling?.innerText || el.id] = el.value;
-            });
-
-            // Checkboxes
-            document.querySelectorAll('input[type="checkbox"]').forEach(el => {
-                data[el.id] = el.checked;
-            });
-
-            return data;
-        }
-
-        function populateFormData(data) {
-            // Text inputs and textareas
-            document.querySelectorAll('input[type="text"], textarea').forEach(el => {
-                const key = el.placeholder || el.previousElementSibling?.innerText || el.id;
-                if (data.hasOwnProperty(key)) {
-                    el.value = data[key];
-                }
-            });
-
-            // Checkboxes
-            document.querySelectorAll('input[type="checkbox"]').forEach(el => {
-                if (data.hasOwnProperty(el.id)) {
-                    el.checked = data[el.id];
-                }
-            });
-        }
-
-        document.getElementById('exportBtn').addEventListener('click', () => {
-            const json = JSON.stringify(collectFormData(), null, 2);
-            const blob = new Blob([json], { type: 'application/json' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'character_data.json';
-            a.click();
-            URL.revokeObjectURL(a.href);
-        });
-
-        document.getElementById('importBtn').addEventListener('click', () => {
-            document.getElementById('fileInput').click();
-        });
-
-        document.getElementById('fileInput').addEventListener('change', function () {
-            const file = this.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                try {
-                    const data = JSON.parse(e.target.result);
-                    populateFormData(data);
-                } catch (err) {
-                    alert('Invalid JSON file.');
-                }
-            };
-            reader.readAsText(file);
-        });
-    </script>
 </body>
 
 </html>

@@ -10,5 +10,8 @@ Companion app for JOTL (Jaws of the Lion) meant to serve as a virtual representa
 ## Design notes
 Scenario log created via [Claude](https://claude.ai/public/artifacts/c78b5bc0-21f5-4b75-a5c7-38e383844d6b)
 
+Current `red-guard.html` `v1 to v4` with [Claude](https://claude.ai/public/artifacts/73a1ceb4-def8-4970-a47d-0ac89c5b57bf) and finalized with [GPT](https://chatgpt.com/share/689b7e10-e404-8005-8610-fc989c4f244d)
+
+
 ### Commands
 run app - `flask run --debug`

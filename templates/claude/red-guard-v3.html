@@ -327,40 +327,40 @@
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk3">
-                <label for="perk3">Remove one -2 card and one +1 card</label>
+                <label for="perk3">Remove one -2 card and one +0 card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk4">
                 <input type="checkbox" id="perk4b">
-                <label for="perk4">Replace one -1 card with one +1 card</label>
+                <label for="perk4">Replace one -1 card with one +0 card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk5">
                 <input type="checkbox" id="perk5b">
-                <label for="perk5">Replace one +1 card with one +2🔥 card</label>
+                <label for="perk5">Replace one -1 card with one +0⚡ card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk6">
                 <input type="checkbox" id="perk6b">
-                <label for="perk6">Replace one +1 card with one +2☀ card</label>
+                <label for="perk6">Replace one -1 card with one +0🔥 card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk7">
                 <input type="checkbox" id="perk7b">
-                <label for="perk7">Add one +1 🔥☀ card</label>
+                <label for="perk7">Add one -1 🎯⚡ card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk8">
                 <input type="checkbox" id="perk8b">
-                <label for="perk8">Add one +1 Shield 🛡1 card</label>
+                <label for="perk8">Add one +0 Shield 🛡-1 card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk9">
-                <label for="perk9">Replace one +0 card with one +1 IMMOBILIZE🥾 card</label>
+                <label for="perk9">Replace one +0 card with one -1 IMMOBILIZE⚡ card</label>
             </div>
             <div class="perk-item">
                 <input type="checkbox" id="perk10">
-                <label for="perk10">Replace one +0 card with one +1 WOUND💥 card</label>
+                <label for="perk10">Replace one +0 card with one -1 WOUND♦ card</label>
             </div>
         </div>
 
@@ -432,11 +432,11 @@
             </div>
             <div class="item-row">
                 <div class="item-icon">👜</div>
-                <input type="text" class="item-input input" placeholder="Bag item">
+                <input type="text" class="item-input input" placeholder="Small item">
             </div>
             <div class="item-row">
                 <div class="item-icon">🎒</div>
-                <input type="text" class="item-input input" placeholder="Bag item">
+                <input type="text" class="item-input input" placeholder="Large item">
             </div>
         </div>
 
@@ -490,79 +490,6 @@
             </div>
         </div>
     </div>
-    <!-- GPT SCRIPT -->
-    <!-- https://chatgpt.com/share/689b7e10-e404-8005-8610-fc989c4f244d -->
-    <!-- Add at the very end of <body>, just before </body> -->
-    <div class="is-center" style="margin-top: 2rem;">
-        <button id="exportBtn" class="button primary">Export JSON</button>
-        <button id="importBtn" class="button">Import JSON</button>
-        <input type="file" id="fileInput" accept=".json" style="display:none;">
-    </div>
-
-    <script>
-        function collectFormData() {
-            const data = {};
-
-            // Text inputs and textareas
-            document.querySelectorAll('input[type="text"], textarea').forEach(el => {
-                data[el.placeholder || el.previousElementSibling?.innerText || el.id] = el.value;
-            });
-
-            // Checkboxes
-            document.querySelectorAll('input[type="checkbox"]').forEach(el => {
-                data[el.id] = el.checked;
-            });
-
-            return data;
-        }
-
-        function populateFormData(data) {
-            // Text inputs and textareas
-            document.querySelectorAll('input[type="text"], textarea').forEach(el => {
-                const key = el.placeholder || el.previousElementSibling?.innerText || el.id;
-                if (data.hasOwnProperty(key)) {
-                    el.value = data[key];
-                }
-            });
-
-            // Checkboxes
-            document.querySelectorAll('input[type="checkbox"]').forEach(el => {
-                if (data.hasOwnProperty(el.id)) {
-                    el.checked = data[el.id];
-                }
-            });
-        }
-
-        document.getElementById('exportBtn').addEventListener('click', () => {
-            const json = JSON.stringify(collectFormData(), null, 2);
-            const blob = new Blob([json], { type: 'application/json' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'character_data.json';
-            a.click();
-            URL.revokeObjectURL(a.href);
-        });
-
-        document.getElementById('importBtn').addEventListener('click', () => {
-            document.getElementById('fileInput').click();
-        });
-
-        document.getElementById('fileInput').addEventListener('change', function () {
-            const file = this.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                try {
-                    const data = JSON.parse(e.target.result);
-                    populateFormData(data);
-                } catch (err) {
-                    alert('Invalid JSON file.');
-                }
-            };
-            reader.readAsText(file);
-        });
-    </script>
 </body>
 
 </html>
