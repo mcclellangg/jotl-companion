@@ -23,8 +23,8 @@
             --font-color: #333333;
             --font-family-sans: sans-serif;
             --font-family-mono: monaco, "Consolas", "Lucida Console", monospace;
-        }           
-        
+        }
+
         body {
             background-color: #1a1a1a;
             color: #e0e0e0;
@@ -91,17 +91,6 @@
             border-color: #007bff;
         }
 
-        .button.outline {
-            border-color: #007bff;
-            color: #007bff;
-            background-color: transparent;
-        }
-
-        .button.outline:hover {
-            background-color: #007bff;
-            color: white;
-        }
-
         .editable {
             border: none;
             background: transparent;
@@ -143,12 +132,12 @@
     <div class="container">
         <h1 class="text-center">Scenario Log</h1>
 
-        <div class="row" style="margin-bottom: 1rem;">
+        <div class="is-center" style="margin-bottom: 1rem;">
             <div class="col-6">
-                <button class="button outline" onclick="exportData()">Export JSON</button>
+                <button class="button primary" onclick="exportData()">Export JSON</button>
             </div>
             <div class="col-6">
-                <button class="button outline" onclick="importData()">Import JSON</button>
+                <button class="button" onclick="importData()">Import JSON</button>
                 <input type="file" id="fileInput" accept=".json" style="display: none;"
                     onchange="handleFileUpload(event)">
             </div>
