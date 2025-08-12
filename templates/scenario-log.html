@@ -5,9 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encounter Tracking Table</title>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/chota@latest"> -->
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
     <style>
         /* Dark mode styling */
+        :root {
+            --bg-color: #ffffff;
+            --bg-secondary-color: #f3f3f6;
+            --color-primary: #14854F;
+            --color-lightGrey: #d2d6dd;
+            --color-grey: #747681;
+            --color-darkGrey: #3f4144;
+            --color-error: #d43939;
+            --color-success: #28bd14;
+            --grid-maxWidth: 120rem;
+            --grid-gutter: 2rem;
+            --font-size: 1.6rem;
+            --font-color: #333333;
+            --font-family-sans: sans-serif;
+            --font-family-mono: monaco, "Consolas", "Lucida Console", monospace;
+        }           
+        
         body {
             background-color: #1a1a1a;
             color: #e0e0e0;
@@ -27,6 +44,10 @@
 
         table {
             background-color: #2d2d2d;
+        }
+
+        .first-row {
+            background-color: #747681 !important;
         }
 
         th {
@@ -101,7 +122,7 @@
             border: none;
             font-weight: bold;
             width: 100%;
-            padding: 0.25rem;
+            padding: 0.1rem;
             color: #ffffff;
         }
 
@@ -133,7 +154,7 @@
             </div>
         </div>
 
-        <table class="striped">
+        <table>
             <thead>
                 <tr>
                     <th>Encounter</th>
@@ -144,7 +165,7 @@
             </thead>
             <tbody id="tableBody">
                 <!-- Initial scenario -->
-                <tr class="scenario-group-1">
+                <tr class="scenario-group-1 first-row">
                     <td><input type="text" class="encounter-name" value="Encounter_01"></td>
                     <td class="number-cell"><input type="text" class="editable xp-input" value="0"></td>
                     <td class="number-cell"><input type="text" class="editable gold-input" value="0"></td>
@@ -192,9 +213,12 @@
                 { type: 'Shop', editable: false }
             ];
 
-            scenarioRows.forEach(row => {
+            scenarioRows.forEach((row, index) => {
                 const tr = document.createElement('tr');
                 tr.className = groupClass;
+                if (index == 0) {
+                    tr.classList.add('first-row');
+                }
 
                 const nameCell = row.editable
                     ? `<input type="text" class="encounter-name" value="Encounter_${encounterNumber}">`
@@ -314,6 +338,9 @@
                 tr.className = groupClass;
 
                 const rowType = index % 3; // 0=Encounter, 1=Event, 2=Shop
+                if (rowType == 0) {
+                    tr.classList.add('first-row')
+                }
                 const isEditable = rowType === 0; // Only encounter names are editable
 
                 const nameCell = isEditable
