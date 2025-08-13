@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inox Hatchet - Character Sheet</title>
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+    <link rel="stylesheet" href="/static/character.css">
+    <script src="/static/character.js"></script>
+</head>
+
+<body>
+    <div class="character-sheet">
+        <!-- Header -->
+        <div class="sheet-header">
+            <div class="class-icon">🪓</div>
+            <h1 class="sheet-title">Inox Hatchet</h1>
+        </div>
+
+        <!-- Player and Party -->
+        <div class="player-party-section">
+            <div>
+                <label><strong>Player:</strong></label>
+                <input type="text" class="input">
+            </div>
+            <div>
+                <label><strong>Party:</strong></label>
+                <input type="text" class="input">
+            </div>
+        </div>
+
+        <!-- Level Section -->
+        <div class="level-section">
+            <div class="section-title">Level</div>
+            <table class="level-table">
+                <thead>
+                    <tr>
+                        <th>XP</th>
+                        <th>Level</th>
+                        <th>Health</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>45</td>
+                        <td>2</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>95</td>
+                        <td>3</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>150</td>
+                        <td>4</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>210</td>
+                        <td>5</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>275</td>
+                        <td>6</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>345</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>420</td>
+                        <td>8</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>9</td>
+                        <td>14</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Perks Section -->
+        <div class="perks-section">
+            <div class="section-title">Perks</div>
+            <div class="perk-item"><input type="checkbox" id="perk1"><input type="checkbox" id="perk1b"><label
+                    for="perk1">Remove two (-1) cards</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk2"><label for="perk2">Replace one (+0) card with one
+                    (+2) MUDDLE card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk3"><label for="perk3">Replace one (+0) card with one
+                    (+1) POISON💀 card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk4"><label for="perk4">Replace one (+0) card with one
+                    (+1) WOUND💥 card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk5"><label for="perk5">Replace one (+0) card with one
+                    (+1) IMMOBILIZE🥾 card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk6"><label for="perk6">Replace one (+0) card with one
+                    (+1) PUSH➡ 2 card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk7"><label for="perk7">Replace one (+0) card with one
+                    (+0) STUN card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk8"><label for="perk8">Replace one (+1) card with one
+                    (+1) STUN card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk9"><input type="checkbox" id="perk9b"><input
+                    type="checkbox" id="perk9c"><label for="perk9">Add one (+2) WIND💨 card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk10"><input type="checkbox" id="perk10b"><input
+                    type="checkbox" id="perk10c"><label for="perk10">Replace one (+1) with one (+3) card</label></div>
+        </div>
+
+        <!-- Perk Notes -->
+        <div class="perk-notes">
+            <div class="section-title">Perk Notes:</div>
+            <div class="perk-notes-grid">
+                <div class="perk-notes-column">
+                    <div class="perk-note-row">
+                        <span class="checked-icon">✓</span>
+                        <input type="checkbox" id="note1">
+                        <input type="checkbox" id="note2">
+                        <input type="checkbox" id="note3">
+                    </div>
+                    <div class="perk-note-row">
+                        <span class="checked-icon">✓</span>
+                        <input type="checkbox" id="note4">
+                        <input type="checkbox" id="note5">
+                        <input type="checkbox" id="note6">
+                    </div>
+                    <div class="perk-note-row">
+                        <span class="checked-icon">✓</span>
+                        <input type="checkbox" id="note7">
+                        <input type="checkbox" id="note8">
+                        <input type="checkbox" id="note9">
+                    </div>
+                </div>
+                <div class="perk-notes-column">
+                    <div class="perk-note-row">
+                        <span class="checked-icon">✓</span>
+                        <input type="checkbox" id="note10">
+                        <input type="checkbox" id="note11">
+                        <input type="checkbox" id="note12">
+                    </div>
+                    <div class="perk-note-row">
+                        <span class="checked-icon">✓</span>
+                        <input type="checkbox" id="note13">
+                        <input type="checkbox" id="note14">
+                        <input type="checkbox" id="note15">
+                    </div>
+                    <div class="perk-note-row">
+                        <span class="checked-icon">✓</span>
+                        <input type="checkbox" id="note16">
+                        <input type="checkbox" id="note17">
+                        <input type="checkbox" id="note18">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Items Section -->
+        <div class="items-section">
+            <div class="section-title">Items</div>
+            <div class="item-row">
+                <div class="item-icon">⛑</div>
+                <input type="text" class="item-input input" placeholder="Helmet/Head item">
+            </div>
+            <div class="item-row">
+                <div class="item-icon">🛡</div>
+                <input type="text" class="item-input input" placeholder="Armor/Body item">
+            </div>
+            <div class="item-row">
+                <div class="item-icon">🥾</div>
+                <input type="text" class="item-input input" placeholder="Boots/Feet item">
+            </div>
+            <div class="item-row">
+                <div class="item-icon">🎒</div>
+                <input type="text" class="item-input input" placeholder="Gloves/Hands item">
+            </div>
+            <div class="item-row">
+                <div class="item-icon">👜</div>
+                <input type="text" class="item-input input" placeholder="Bag item">
+            </div>
+            <div class="item-row">
+                <div class="item-icon">🎒</div>
+                <input type="text" class="item-input input" placeholder="Bag item">
+            </div>
+        </div>
+
+        <!-- Notes Section -->
+        <div class="notes-section">
+            <div class="notes-header">
+                <div class="section-title">Notes:</div>
+                <div class="card-icon">10</div>
+            </div>
+            <textarea class="notes-text" placeholder="Character notes, achievements, story elements..."></textarea>
+            <!-- Level Tracker -->
+            <div class="level-tracker">
+                <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                    <tr>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">Lvl
+                        </td>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">1
+                        </td>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">2
+                        </td>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">3
+                        </td>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">4
+                        </td>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">5
+                        </td>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">6
+                        </td>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">7
+                        </td>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">8
+                        </td>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center; font-weight: bold;">9
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"
+                            style="border: 1px solid #333; padding: 0.25rem; text-align: center; display: table-cell; vertical-align: middle;">
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                                <div class="item-icon" style="width: 20px; height: 20px; font-size: 0.8rem;">🎒</div>
+                                <span>1</span>
+                            </div>
+                        </td>
+                        <td colspan="2" style="border: 1px solid #333; padding: 0.25rem; text-align: center;">2</td>
+                        <td colspan="2" style="border: 1px solid #333; padding: 0.25rem; text-align: center;">3</td>
+                        <td colspan="2" style="border: 1px solid #333; padding: 0.25rem; text-align: center;">4</td>
+                        <td style="border: 1px solid #333; padding: 0.25rem; text-align: center;">5</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="is-center" style="margin-top: 2rem;">
+        <button id="exportBtn" class="button primary">Export JSON</button>
+        <button id="importBtn" class="button">Import JSON</button>
+        <input type="file" id="fileInput" accept=".json" style="display:none;">
+    </div>
+</body>
+
+</html>

@@ -16,5 +16,9 @@ def scenario_log():
 def red_guard():
     return render_template("red-guard.html")
 
+@app.route("/hatchet")
+def hatchet():
+    return render_template("hatchet.html")
+
 if __name__ == "__main__":
     app.run()
