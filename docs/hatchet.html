@@ -4,241 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valrath Red Guard - Character Sheet</title>
+    <title>Inox Hatchet - Character Sheet</title>
     <link rel="stylesheet" href="https://unpkg.com/chota@latest">
-    <style>
-        .character-sheet {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 1rem;
-            background: white;
-            border: 2px solid #333;
-        }
-
-        .sheet-header {
-            text-align: center;
-            border-bottom: 2px solid #333;
-            padding: 0.5rem 0;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .class-icon {
-            width: 40px;
-            height: 40px;
-            background: #666;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .sheet-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0;
-        }
-
-        .player-party-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .level-section {
-            border: 1px solid #333;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .level-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .level-table th,
-        .level-table td {
-            border: 1px solid #333;
-            padding: 0.5rem;
-            text-align: center;
-        }
-
-        .level-table th {
-            background: #f5f5f5;
-            font-weight: bold;
-        }
-
-        .level-input {
-            width: 100%;
-            max-width: 60px;
-            text-align: center;
-            border: 1px solid #333;
-        }
-
-        .perks-section {
-            border: 1px solid #333;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .perk-item {
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .perk-notes {
-            border: 1px solid #333;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .perk-notes-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
-        .perk-notes-column {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .perk-note-row {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .checked-icon {
-            color: #28a745;
-            font-weight: bold;
-        }
-
-        .items-section {
-            border: 1px solid #333;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .item-row {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-        }
-
-        .item-icon {
-            width: 30px;
-            height: 30px;
-            background: #666;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 0.8rem;
-            flex-shrink: 0;
-        }
-
-        .item-input {
-            flex: 1;
-        }
-
-        .notes-section {
-            border: 1px solid #333;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .notes-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .card-icon {
-            width: 30px;
-            height: 30px;
-            background: #333;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .notes-text {
-            width: 100%;
-            height: 150px;
-            border: 1px solid #333;
-            padding: 0.5rem;
-            resize: vertical;
-        }
-
-        .level-tracker {
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        .level-boxes {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .level-box {
-            width: 30px;
-            height: 30px;
-            border: 1px solid #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .section-title {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            border-bottom: 1px solid #333;
-            padding-bottom: 0.25rem;
-        }
-
-        @media (max-width: 480px) {
-            .character-sheet {
-                padding: 0.5rem;
-            }
-
-            .perk-notes-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .player-party-section {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="character.css">
+    <script src="character.js"></script>
 </head>
 
 <body>
     <div class="character-sheet">
         <!-- Header -->
         <div class="sheet-header">
-            <div class="class-icon">⚔</div>
-            <h1 class="sheet-title">Valrath Red Guard</h1>
+            <div class="class-icon">🪓</div>
+            <h1 class="sheet-title">Inox Hatchet</h1>
         </div>
 
         <!-- Player and Party -->
@@ -317,51 +94,26 @@
         <!-- Perks Section -->
         <div class="perks-section">
             <div class="section-title">Perks</div>
-            <div class="perk-item">
-                <input type="checkbox" id="perk1">
-                <label for="perk1">Remove four +0 cards</label>
-            </div>
-            <div class="perk-item">
-                <input type="checkbox" id="perk2">
-                <label for="perk2">Remove two -1 cards</label>
-            </div>
-            <div class="perk-item">
-                <input type="checkbox" id="perk3">
-                <label for="perk3">Remove one -2 card and one +0 card</label>
-            </div>
-            <div class="perk-item">
-                <input type="checkbox" id="perk4">
-                <input type="checkbox" id="perk4b">
-                <label for="perk4">Replace one -1 card with one +0 card</label>
-            </div>
-            <div class="perk-item">
-                <input type="checkbox" id="perk5">
-                <input type="checkbox" id="perk5b">
-                <label for="perk5">Replace one -1 card with one +0⚡ card</label>
-            </div>
-            <div class="perk-item">
-                <input type="checkbox" id="perk6">
-                <input type="checkbox" id="perk6b">
-                <label for="perk6">Replace one -1 card with one +0🔥 card</label>
-            </div>
-            <div class="perk-item">
-                <input type="checkbox" id="perk7">
-                <input type="checkbox" id="perk7b">
-                <label for="perk7">Add one -1 🎯⚡ card</label>
-            </div>
-            <div class="perk-item">
-                <input type="checkbox" id="perk8">
-                <input type="checkbox" id="perk8b">
-                <label for="perk8">Add one +0 Shield 🛡-1 card</label>
-            </div>
-            <div class="perk-item">
-                <input type="checkbox" id="perk9">
-                <label for="perk9">Replace one +0 card with one -1 IMMOBILIZE⚡ card</label>
-            </div>
-            <div class="perk-item">
-                <input type="checkbox" id="perk10">
-                <label for="perk10">Replace one +0 card with one -1 WOUND♦ card</label>
-            </div>
+            <div class="perk-item"><input type="checkbox" id="perk1"><input type="checkbox" id="perk1b"><label
+                    for="perk1">Remove two (-1) cards</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk2"><label for="perk2">Replace one (+0) card with one
+                    (+2) MUDDLE card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk3"><label for="perk3">Replace one (+0) card with one
+                    (+1) POISON💀 card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk4"><label for="perk4">Replace one (+0) card with one
+                    (+1) WOUND💥 card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk5"><label for="perk5">Replace one (+0) card with one
+                    (+1) IMMOBILIZE🥾 card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk6"><label for="perk6">Replace one (+0) card with one
+                    (+1) PUSH➡ 2 card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk7"><label for="perk7">Replace one (+0) card with one
+                    (+0) STUN card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk8"><label for="perk8">Replace one (+1) card with one
+                    (+1) STUN card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk9"><input type="checkbox" id="perk9b"><input
+                    type="checkbox" id="perk9c"><label for="perk9">Add one (+2) WIND💨 card</label></div>
+            <div class="perk-item"><input type="checkbox" id="perk10"><input type="checkbox" id="perk10b"><input
+                    type="checkbox" id="perk10c"><label for="perk10">Replace one (+1) with one (+3) card</label></div>
         </div>
 
         <!-- Perk Notes -->
@@ -432,11 +184,11 @@
             </div>
             <div class="item-row">
                 <div class="item-icon">👜</div>
-                <input type="text" class="item-input input" placeholder="Small item">
+                <input type="text" class="item-input input" placeholder="Bag item">
             </div>
             <div class="item-row">
                 <div class="item-icon">🎒</div>
-                <input type="text" class="item-input input" placeholder="Large item">
+                <input type="text" class="item-input input" placeholder="Bag item">
             </div>
         </div>
 
@@ -447,7 +199,6 @@
                 <div class="card-icon">10</div>
             </div>
             <textarea class="notes-text" placeholder="Character notes, achievements, story elements..."></textarea>
-
             <!-- Level Tracker -->
             <div class="level-tracker">
                 <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
@@ -489,6 +240,11 @@
                 </table>
             </div>
         </div>
+    </div>
+    <div class="is-center" style="margin-top: 2rem;">
+        <button id="exportBtn" class="button primary">Export JSON</button>
+        <button id="importBtn" class="button">Import JSON</button>
+        <input type="file" id="fileInput" accept=".json" style="display:none;">
     </div>
 </body>
 
