@@ -24,3 +24,5 @@ Companion app for JOTL (Jaws of the Lion) meant to serve as a virtual representa
   - [Claude - Artifact](https://claude.ai/public/artifacts/73a1ceb4-def8-4970-a47d-0ac89c5b57bf)
   - [GPT](https://chatgpt.com/share/689b7e10-e404-8005-8610-fc989c4f244d)
   - [Claude - Chat](https://claude.ai/share/f979dec2-0e46-4539-b53d-6c8d27b76a1a)
+
+- [GitHub Copilot & Agent Prompts](https://gist.github.com/mcclellangg/d7d767c8eb04975145555ce60ce8c11d)
