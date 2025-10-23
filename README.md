@@ -1,5 +1,5 @@
 # JOTL Companion
-Companion app for JOTL (Jaws of the Lion) meant to serve as a virtual representation of your character sheet. Inspired by my [disorderly session notes](https://github.com/mcclellangg/PARA/blob/master/4_Resources/Gaming/JOTL/Red%20Guard%20Sheet.md). Character sheets created by [TiMax7](https://boardgamegeek.com/image/5587995/timax7).
+Companion app for JOTL (Jaws of the Lion) meant to serve as a virtual representation of your character sheet. Inspired by my [disorderly session notes](https://gist.github.com/mcclellangg/ac32aab5e71463584112dfca35d94e01). Character sheets created by [TiMax7](https://boardgamegeek.com/image/5587995/timax7).
 
 ## Features
 - track gold, xp, items, perks added, player notes on a per encounter basis
